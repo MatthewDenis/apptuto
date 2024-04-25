@@ -3,20 +3,17 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 
 Widget loadingWidget(){
-  return SafeArea(
-      minimum: EdgeInsets.fromLTRB(0, 40, 0,0),
-      child:Container(
-        color: Colors.blue,
+  return Container(
+        color: Colors.black26,
         child: SpinKitFadingCircle(
           itemBuilder: (BuildContext context, int index) {
             return DecoratedBox(
               decoration: BoxDecoration(
-                color: index.isEven ? Colors.red : Colors.green,
+                color: index.isEven ? Colors.blue : Colors.blueGrey,
               ),
             );
           },
         ),
-      )
   );
 }
 
